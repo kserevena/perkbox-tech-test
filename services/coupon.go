@@ -3,12 +3,10 @@ package services
 import (
 	"database/sql"
 	"encoding/json"
+	"github.com/gorilla/mux"
+	"github.com/kserevena/perkbox-tech-test/modal"
 	"log"
 	"net/http"
-
-	"github.com/rychanfox/couponService/modal"
-
-	"github.com/gorilla/mux"
 )
 
 func NewIndex(router *mux.Router, db *sql.DB) {
