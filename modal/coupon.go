@@ -27,7 +27,7 @@ func (c *Coupon) GetCoupons(db *sql.DB) ([]Coupon, error) {
 	coupons := []Coupon{}
 
 	for rows.Next() {
-		var c Coupon
+		var c Coupon = Coupon{}
 		if err := rows.Scan(
 			&c.ID,
 			&c.Name,
